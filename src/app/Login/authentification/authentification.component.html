@@ -1,0 +1,67 @@
+
+<div class="bg-gradient-primary" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10">
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="flex-grow-1 bg-login-image"   style="background-image: url(https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+
+                                    <!-- <img [src]="loginPageImg" alt="">
+                                            vGestionParcFrontEnd\src\assets\img\TrucksImg.jpg
+                                          E:\Stage\GestParc_FrontEnd\GestionParcFrontEnd\src\
+                                         
+                                        -->      
+                                                                       
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4">Bonjour !</h4>
+                                    </div>
+
+
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <div class="alert alert-danger" *ngIf='invalidLogin'>{{errorMessage}}</div>
+                                  
+                                            <input class=" form-control form-control-user" 
+                                            type="email"
+                                             name="email"
+                                             [(ngModel)]="username"
+                                             required 
+                                             placeholder="Entrer votre email / username" >
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-user"
+                                             type="password"
+                                             name="password"
+                                             [(ngModel)]="password"
+                                             required 
+                                                 placeholder="Mot de passe">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <div class="form-check">
+                                                    <input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1">
+                                                    <label class="form-check-label custom-control-label" for="formCheck-1">Afficher mot de passe</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-block text-white btn-user" (click)="login()" >Login</button>
+                                        <hr>
+                                    </form>
+                                
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
