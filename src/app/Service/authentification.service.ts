@@ -16,12 +16,13 @@ export class AuthentificationService {
 
   public username: String;
   public password: String;
+
  
   constructor(private http : HttpClient) { }
 
   login(username , password):Observable<any> {
-	   let data ={ email : username , motDePasse:password};
-      
+
+     let data ={ email : username , password : password};      
     return this.http.post('http://localhost:8080/login' , data ,{responseType: 'text'});
 }
 
