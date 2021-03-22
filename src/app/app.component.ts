@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GestionParcFrontEnd';
+  loginPageImg :string = 'assets/img/TrucksImg.jpg';
 }
