@@ -1,0 +1,38 @@
+       <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Ajouter Une Marque</h3>
+                    <div class="row mb-3">
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" [src]="imgURL"  *ngIf="imgURL" width="160" height="160">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="customFile">télécharger La photo ici</label>
+                                        <input type="file" accept="image/*" (change)="onFileChanged($event)" class="form-control"  />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 font-weight-bold">Ajouter Marque</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-group"><label for="address"><strong>Ajouter Marque</strong></label><input class="form-control" type="text"
+                                                    id="address" placeholder="Entrer le nom de la marque"  [(ngModel)]="markName"    name="nom"></div>
+                                                <div class="form-group"><button class="btn btn-primary btn-sm"  type ="submit" (click)="addMark()">Ajouter Marque</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

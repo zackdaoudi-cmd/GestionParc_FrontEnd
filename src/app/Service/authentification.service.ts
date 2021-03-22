@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { baseUrl, environment } from 'src/environments/environment';
 
 
 
@@ -22,8 +23,8 @@ export class AuthentificationService {
 
   login(username , password):Observable<any> {
 
-     let data ={ email : username , password : password};      
-    return this.http.post('http://localhost:8080/login' , data ,{responseType: 'text'});
+     let data = { email : username , password : password};      
+    return this.http.post(`${baseUrl}login` , data ,{responseType: 'text'});
 }
 
 //signout 

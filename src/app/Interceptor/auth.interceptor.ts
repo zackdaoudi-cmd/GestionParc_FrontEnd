@@ -6,6 +6,7 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { token, urlInter } from 'src/environments/environment';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -14,12 +15,12 @@ export class AuthInterceptor implements HttpInterceptor {
 
         intercept(request: HttpRequest<unknown>, next: HttpHandler):
             Observable<HttpEvent<unknown>> {
-                if (request.url !== 'http://localhost:8000/login') {
-                const token = localStorage.getItem('token');
+                if (request.url !== `${urlInter}login`) {
+               // const token = localStorage.getItem('token');
                 request = request.clone({
                 setHeaders: {
-                Authorization: 'bearer ' + token
-                }
+                  Authorization: 'bearer ' + token
+                 }
                 });
                 }
                 return next.handle(request);

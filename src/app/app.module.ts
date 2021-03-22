@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
@@ -13,18 +13,30 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AuthInterceptor} from 'src/app/Interceptor/auth.interceptor';
 
 import { AcceuilComponent } from './Component/acceuil/acceuil.component';
+import { NavbarTopComponent } from './Component/navbar-top/navbar-top.component';
+import { ListeMarqueComponent } from './Component/Marque/liste-marque/liste-marque.component';
+import { AjouterMarqueComponent } from './Component/Marque/ajouter-marque/ajouter-marque.component';
+import { UpdateMarqueComponent } from './Component/Marque/update-marque/update-marque.component';
+
+
  
 @NgModule({
   declarations: [
     AppComponent,
     AuthentificationComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    NavbarTopComponent,
+    ListeMarqueComponent,
+    AjouterMarqueComponent,
+    UpdateMarqueComponent,
   ],
+ 
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [

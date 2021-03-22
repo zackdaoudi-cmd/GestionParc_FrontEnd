@@ -14,6 +14,8 @@ export class AcceuilComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  
   signout(){
     localStorage.clear();
     this.route.navigateByUrl('/Authentification');
