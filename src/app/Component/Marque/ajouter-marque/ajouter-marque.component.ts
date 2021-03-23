@@ -63,31 +63,43 @@ public onFileChanged(event) {
 }
 
 
- addMark() {
-    console.log(this.markName)
+addMark() {
+	console.log(this.markName)
 
-    const uploadData = new FormData();
+	const uploadData = new FormData();
+
+	if (this.selectedFile == null) {
+    console.log("selected files == bull ");
+
+   // console.log(this.markName);
+		this.marqueService.createNewMark(this.markName).subscribe(
+			(res) => {
+        console.log(res);
+				this.router.navigateByUrl('List-des-marques');
+			},(err:Error)=>{
+        console.log(err);
+      }
+		);  
+	} else {
     uploadData.append('imageFile', this.selectedFile);
-    this.selectedFile.imageName = this.selectedFile.name;
-
-         console.log(uploadData.getAll);
-         // we upload our image and send it to back 
-     this.httpClient.post('http://localhost:8080/Marque/uploadImg', uploadData, { observe: 'response' })
-     .subscribe((response) => {
-       
-       // if upload success = 200 then we can create our  Marque object 
-    if (response.status === 200) {
-       this.marqueService.createNewMark(this.markName).subscribe(
-             (marque) => {
-                  console.log("_________",this.selectedFile);
-              //this.router.navigateByUrl('List-des-marques');
-            }
-        );
-        console.log('Image uploaded successfully');
-    } else {
-      console.log('Image not uploaded successfully');
-    }
-     }
-  );
+    this.selectedFile.imageName = this.selectedFile.name;  
+		// we upload our image and send it to back 
+		this.httpClient.post(`${baseUrl}Marque/uploadImg`, uploadData, {
+				observe: 'response'
+			})
+			.subscribe((response) => {
+				// if upload success = 200 then we can create our  Marque object 
+				if (response.status === 200) {
+					this.marqueService.createNewMark(this.markName).subscribe(
+						(response) => {
+							//this.router.navigateByUrl('List-des-marques');
+						}
+					);
+					console.log('Image uploaded successfully');
+				} else {
+					console.log('Image not uploaded successfully');
+				}
+			});
+	}
 }
 }

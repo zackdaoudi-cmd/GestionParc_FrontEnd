@@ -27,44 +27,15 @@ export class AuthentificationService {
     return this.http.post(`${baseUrl}login` , data ,{responseType: 'text'});
 }
 
+getUtilisateur(id: Number){
+  return this.http.get(`${baseUrl}/login/${id}`);
+}
+
 //signout 
 signOut(): void {
   window.sessionStorage.clear();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // authenticationService(username: String, password: String) {
-  //   return this.http.post(`http://localhost:8080/login`,
-  //     { headers: { 
-  //       authorization: this.createBasicAuthToken(username, password) } }).pipe(map((res) => {
-  //       this.username = username;
-  //       this.password = password;
-  //       this.registerSuccessfulLogin(username, password);
-  //     }));
-  // }
 
   createBasicAuthToken(username: String, password: String) {
     return 'Basic ' + window.btoa(username + ":" + password)

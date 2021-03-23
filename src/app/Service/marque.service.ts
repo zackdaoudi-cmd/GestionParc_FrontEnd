@@ -18,7 +18,6 @@ export class MarqueService {
 
 
   createNewMark(markName): Observable<any> {
-    
     let data ={markName : markName}
     return this.http.post<Marque>(`${baseUrl}Marque/addMarque`,data );
   }
