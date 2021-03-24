@@ -74,7 +74,6 @@ addMark() {
    // console.log(this.markName);
 		this.marqueService.createNewMark(this.markName).subscribe(
 			(res) => {
-        console.log(res);
 				this.router.navigateByUrl('List-des-marques');
 			},(err:Error)=>{
         console.log(err);
@@ -92,12 +91,9 @@ addMark() {
 				if (response.status === 200) {
 					this.marqueService.createNewMark(this.markName).subscribe(
 						(response) => {
-							//this.router.navigateByUrl('List-des-marques');
+							this.router.navigateByUrl('List-des-marques');
 						}
 					);
-					console.log('Image uploaded successfully');
-				} else {
-					console.log('Image not uploaded successfully');
 				}
 			});
 	}

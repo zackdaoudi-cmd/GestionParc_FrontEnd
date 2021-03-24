@@ -20,6 +20,9 @@ export class ListeMarqueComponent implements OnInit {
       this.getListMark();
     
   }
+  ajouterRouter(){
+    this.router.navigateByUrl("AjouterMarque");
+  }
  
   //gett List Marque 
   public getListMark(){
