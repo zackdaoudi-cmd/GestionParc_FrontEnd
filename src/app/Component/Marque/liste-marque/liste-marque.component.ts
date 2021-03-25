@@ -30,7 +30,7 @@ export class ListeMarqueComponent implements OnInit {
     this.marqueService.getAllMarks().subscribe(
       (res : Marque[])=>{
         
-        this. marque = res;
+        this.marque = res;
         
         console.log(res);
          

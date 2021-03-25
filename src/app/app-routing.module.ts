@@ -10,6 +10,8 @@ import { AjouterMarqueComponent } from './Component/Marque/ajouter-marque/ajoute
 import { ListeMarqueComponent } from './Component/Marque/liste-marque/liste-marque.component';
 import { AppComponent } from './app.component';
 import { UpdateMarqueComponent } from './Component/Marque/update-marque/update-marque.component';
+import { AjouterModelComponent } from './Component/Model/ajouter-model/ajouter-model.component';
+import { ListeModelComponent } from './Component/Model/liste-model/liste-model.component';
 
 const routes: Routes = [
 
@@ -29,6 +31,8 @@ const routes: Routes = [
           { path: 'Modifier-marques/:id', component: UpdateMarqueComponent },
           { path: 'AjouterMarque', component: AjouterMarqueComponent },
           {path : 'nav', component:NavbarTopComponent},
+          {path :'ajouterModel' , component:AjouterModelComponent},
+          {path:'listDesModels' , component :ListeModelComponent}
 
        ]
     }

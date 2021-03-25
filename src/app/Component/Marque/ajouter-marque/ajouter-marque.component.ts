@@ -4,7 +4,6 @@ import { FormBuilder  , FormControl, FormGroup} from '@angular/forms';
 import { baseUrl } from 'src/environments/environment';
 
 import { Router } from '@angular/router';
-import { Marque } from 'src/app/Model/Marque';
 import { MarqueService } from 'src/app/Service/marque.service';
 import { HttpClient } from '@angular/common/http';
 

@@ -18,6 +18,7 @@ export class UpdateMarqueComponent implements OnInit {
   imgURL: any;
   markName:String ; 
   idParms:Number
+  
 
   constructor(private activateRoute: ActivatedRoute,private marqueService : MarqueService,
     private http : HttpClient,
