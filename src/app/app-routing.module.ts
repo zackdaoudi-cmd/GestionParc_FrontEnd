@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { UpdateMarqueComponent } from './Component/Marque/update-marque/update-marque.component';
 import { AjouterModelComponent } from './Component/Model/ajouter-model/ajouter-model.component';
 import { ListeModelComponent } from './Component/Model/liste-model/liste-model.component';
+import { UpdateModelComponent } from './Component/Model/update-model/update-model.component';
 
 const routes: Routes = [
 
@@ -27,12 +28,19 @@ const routes: Routes = [
       children:
        [
           { path: 'Accueil', component: AcceuilComponent },
+          /**Start Marque */
           { path: 'List-des-marques', component: ListeMarqueComponent },
           { path: 'Modifier-marques/:id', component: UpdateMarqueComponent },
           { path: 'AjouterMarque', component: AjouterMarqueComponent },
+                    /**End Marque */
           {path : 'nav', component:NavbarTopComponent},
+                    /**Start Model */
           {path :'ajouterModel' , component:AjouterModelComponent},
-          {path:'listDesModels' , component :ListeModelComponent}
+          {path:'listDesModels' , component :ListeModelComponent},
+          {path:'ModifierModel/:id',component:UpdateModelComponent}
+                    /**End Model */
+
+
 
        ]
     }

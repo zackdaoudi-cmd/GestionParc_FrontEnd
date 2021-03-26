@@ -26,7 +26,7 @@
                                             <td>{{m.modelName}}</td>
                                             <td>{{m.typeVehicule}}</td>
                                             <td>{{m.marque.markName}}</td>
-                                            <td><button class="btn btn-info" type="button" >Modifier</button></td>
+                                            <td><button class="btn btn-info" type="button" (click)="Update(m.idModel)" >Modifier</button></td>
                                             <td><button class="btn btn-danger" type="button" (click)="delete(m.idModel)">Supprimer</button></td>
                                         </tr>
                                     </tbody>

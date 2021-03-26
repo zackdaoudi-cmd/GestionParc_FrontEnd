@@ -38,7 +38,14 @@ export class ModelService {
   /**Delete by id */
   public deleteById(id:Number){
     return this.http.delete(`${baseUrl}Model/delete/${id}`);
-  
+  }
+
+  /**get < Model > by id  */
+  getModelById(id:Number):Observable<any>{
+    return this.http.get<Model>(`${baseUrl}Model/modelById/${id}`);
+  }
+  updateById(id:Number , model :Model):Observable<any>{
+    return this.http.put<any>(`${baseUrl}Model/updateById/${id}`,model);
   }
 
 }

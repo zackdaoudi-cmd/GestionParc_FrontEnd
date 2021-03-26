@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModelService } from 'src/app/Service/model.service';
 import {Model} from 'src/app/Model/Model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-model',
@@ -10,7 +11,7 @@ import {Model} from 'src/app/Model/Model';
 export class ListeModelComponent implements OnInit {
 
   model :Model [];
-  constructor(private modelService : ModelService) { }
+  constructor(private modelService : ModelService, private router : Router) { }
 
   ngOnInit(): void {
     this.getModel();
@@ -32,7 +33,10 @@ export class ListeModelComponent implements OnInit {
   }
   refresh(): void {
     window.location.reload();
-}   
+}  
+Update(id){
+  this.router.navigateByUrl(`ModifierModel/${id}`);
+} 
 
 
 
