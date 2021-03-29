@@ -44,9 +44,12 @@ export class ModelService {
   getModelById(id:Number):Observable<any>{
     return this.http.get<Model>(`${baseUrl}Model/modelById/${id}`);
   }
+
   updateById(id:Number , model :Model):Observable<any>{
     return this.http.put<any>(`${baseUrl}Model/updateById/${id}`,model);
   }
+
+  
 
 }
 

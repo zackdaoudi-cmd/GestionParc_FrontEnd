@@ -1,0 +1,59 @@
+
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Liste Des Models&nbsp;</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">Model information&nbsp;</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>id Contrat</th>
+                                            <th>Reference</th>
+                                            <th>Titre Contrat&nbsp;</th>
+                                            <th>Vehicule</th>
+                                            <th>Date De Debut</th>
+                                            <th>Date de Fin</th>
+                                            <th>Prix</th>
+                                            <th>Commantaire</th>
+                                            <th>Modifer</th>
+                                            <th>Supprimer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let c of contrat">
+                                            <td><strong>{{c.idContrat}}</strong></td>
+                                            <td>{{c.reference}}</td>
+                                            <td>{{c.libelleContrat}}</td>
+                                            <td>{{c.vehicule}}</td>
+                                            <td>{{c.startDate}}</td>
+                                            <td>{{c.endDate}}</td>
+                                            <td>{{c.cost}}</td>
+                                            <td>{{c.comment}}</td>
+                                                                           
+                                            <td><button class="btn btn-info" type="button" (click)="Update(c.idContrat)" >Modifier</button></td>
+                                            <td><button class="btn btn-danger" type="button" (click)="delete(c.idContrat)">Supprimer</button></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>id Contrat</th>
+                                            <th>Reference</th>
+                                            <th>Titre Contrat&nbsp;</th>
+                                            <th>Vehicule</th>
+                                            <th>Date De Debut</th>
+                                            <th>Date de Fin</th>
+                                            <th>Prix</th>
+                                            <th>Commantaire</th>
+                                            <th>Modifer</th>
+                                            <th>Supprimer</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      

@@ -20,6 +20,9 @@ import { UpdateMarqueComponent } from './Component/Marque/update-marque/update-m
 import { AjouterModelComponent } from './Component/Model/ajouter-model/ajouter-model.component';
 import { ListeModelComponent } from './Component/Model/liste-model/liste-model.component';
 import { UpdateModelComponent } from './Component/Model/update-model/update-model.component';
+import { AjouterContratComponent } from './Component/Contrat/ajouter-contrat/ajouter-contrat.component';
+import { UpdateContratComponent } from './Component/Contrat/update-contrat/update-contrat.component';
+import { ListContratComponent } from './Component/Contrat/list-contrat/list-contrat.component';
 
 
  
@@ -35,6 +38,9 @@ import { UpdateModelComponent } from './Component/Model/update-model/update-mode
     AjouterModelComponent,
     ListeModelComponent,
     UpdateModelComponent,
+    AjouterContratComponent,
+    UpdateContratComponent,
+    ListContratComponent,
   ],
  
   imports: [

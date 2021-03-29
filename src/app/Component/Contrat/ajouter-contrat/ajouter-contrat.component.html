@@ -1,0 +1,91 @@
+
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Contrat : </h3>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 font-weight-bold">Ajouter Une Contrat :</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                            
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>Reference Contrat : </strong>
+                                                         <br>
+                                                    </label>
+                                                    <input class="form-control" type="text" id="address" placeholder="Entrer Reference ..."  [(ngModel)]="contrat.reference"><!--[(ngModel)]="model.modelName"-->
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>Titre Contrat</strong>
+                                                         <br>
+                                                    </label>
+                                                    <input class="form-control" type="text" id="address" placeholder="Entrer le Titre du Contrat"   [(ngModel)]="contrat.libelleContrat" ><!--[(ngModel)]="model.modelName"-->
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>DropDwonList Des List Des Vehicule</strong>
+                                                         <br>
+                                                    </label>
+                                                    <div class="dropdown">
+                                                        <select class="form-control"[(ngModel)]="contrat.vehicule" >
+                                                             <option   value="" disabled selected>Choisis Marque</option>
+                                                            <option [ngValue]="null"  >hhh</option>  
+                                                          </select>
+                                                    </div> 
+                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>Start Date</strong>
+                                                         <br>
+                                                    </label>
+                                                    <input class="form-control"  type="date" [(ngModel)]="contrat.startDate">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>End date</strong>
+                                                         <br>
+                                                    </label>
+                                                    <input class="form-control" type="date" [(ngModel)]="contrat.endDate"><!--[(ngModel)]="model.modelName"-->
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="card mb-3">
+                                                        <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" [src]="imgURL"  *ngIf="imgURL" width="160" height="160">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="customFile">télécharger La Recu ici</label>
+                                                                <input type="file" accept="image/*" (change)="onFileChanged($event)" class="form-control"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>Cost :</strong>
+                                                         <br>
+                                                    </label>
+                                                    <input class="form-control" type="number" placeholder="cost MAD "[(ngModel)]="contrat.cost" ><!--[(ngModel)]="model.modelName"-->
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">
+                                                         <strong>Comments :</strong>
+                                                         <br>
+                                                    </label>
+                                                    <textarea class="form-control" placeholder="Entre comments"  rows="2"[(ngModel)]="contrat.comment"></textarea>
+                                                </div>
+
+                                                
+
+                                                <div class="form-group"><button class="btn btn-primary btn-sm" type="submit" (click)="addNewContrat()">Ajouter </button></div>
+                                            
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+               
+    

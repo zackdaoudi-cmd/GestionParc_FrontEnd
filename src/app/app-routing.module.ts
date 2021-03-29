@@ -13,6 +13,9 @@ import { UpdateMarqueComponent } from './Component/Marque/update-marque/update-m
 import { AjouterModelComponent } from './Component/Model/ajouter-model/ajouter-model.component';
 import { ListeModelComponent } from './Component/Model/liste-model/liste-model.component';
 import { UpdateModelComponent } from './Component/Model/update-model/update-model.component';
+import { UpdateContratComponent } from './Component/Contrat/update-contrat/update-contrat.component';
+import { AjouterContratComponent } from './Component/Contrat/ajouter-contrat/ajouter-contrat.component';
+import { ListContratComponent } from './Component/Contrat/list-contrat/list-contrat.component';
 
 const routes: Routes = [
 
@@ -37,8 +40,14 @@ const routes: Routes = [
                     /**Start Model */
           {path :'ajouterModel' , component:AjouterModelComponent},
           {path:'listDesModels' , component :ListeModelComponent},
-          {path:'ModifierModel/:id',component:UpdateModelComponent}
+          {path:'ModifierModel/:id',component:UpdateModelComponent},
                     /**End Model */
+                    /**start Contrat */
+                    {path :'ajouterContrat' , component:AjouterContratComponent},
+                    {path:'listDesContrats' , component :ListContratComponent},
+                    {path:'ModifierContrat/:id',component:UpdateContratComponent}
+          
+                    /**End Contrat */
 
 
 

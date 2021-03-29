@@ -17,7 +17,7 @@ export class MarqueService {
   constructor(private http:HttpClient) { }
 
 
-  createNewMark(markName): Observable<any> {
+  createNewMark(markName):Observable<any> {
     let data ={markName : markName}
     return this.http.post<Marque>(`${baseUrl}Marque/addMarque`,data );
   }
