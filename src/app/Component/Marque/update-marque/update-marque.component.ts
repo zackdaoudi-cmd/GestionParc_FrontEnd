@@ -82,11 +82,10 @@ export class UpdateMarqueComponent implements OnInit {
 
          console.log(uploadData)
          // check if already selecte a file if sleectedFil ==  null then he will change just the 'Mark Name';
-         if(this.selectedFile == null){
-             
+         if(this.selectedFile == null){             
             this.marqueService.upldatById(this.markName,this.idParms).subscribe(
                 (res) => {
-    
+
                 this.router.navigateByUrl('List-des-marques');
                 }
             );

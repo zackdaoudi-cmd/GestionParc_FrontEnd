@@ -16,6 +16,8 @@ export class UpdateModelComponent implements OnInit {
   model : Model  = new Model();
   marque :Marque[] ;
   mark : Marque = new Marque();
+  imgdata :any;
+  
 
   constructor(private modelService : ModelService, private activateRoute:ActivatedRoute) { }
 
@@ -31,6 +33,7 @@ export class UpdateModelComponent implements OnInit {
         console.log(res); 
         this.model = res;
         this.imgURL = 'data:image/png;base64,'+res.dataImg;
+        this.imgdata = res.dataImg;
         this.mark = res.marque;
         console.log(this.model.marque);
 
@@ -66,6 +69,7 @@ export class UpdateModelComponent implements OnInit {
       this.modelService.updateById(this.idParms,this.model).subscribe(res=>{
         console.log("update without pic");
       });
+      
     }else{
       const formData  = new FormData();
       formData.append('imageFile',this.selectedFile);
@@ -79,4 +83,6 @@ export class UpdateModelComponent implements OnInit {
 
     }
   }
+
+    
 }

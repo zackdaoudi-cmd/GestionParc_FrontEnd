@@ -49,15 +49,17 @@
                                         <div class="card-body">
                                             <form>
                                                 <div class="form-group"><label for="address">
-                                                    <strong>Marque :&nbsp;</strong><br></label>
-                                                  <div class="dropdown">
-                                                        <select class="mdb-select md-form" searchable="Search here.." [(ngModel)]="model.marque" >
-                                                            <option   [value]="model.marque" disabled selected>Choisis Marque</option>
-                                                            <option  *ngFor="let m of marque" [ngValue]="m"  >{{m.markName}}</option>
-                                                            
-                                                        </select>
-                                                    </div>
+                                                        <strong>Marque :&nbsp;</strong><br></label>
+                                                        <div class="dropdown">
+                                                            <select class="form-control" [(ngModel)]="model.marque" >
+                                                                <option   [value]="model.marque" disabled >Choisis Marque</option>
+                                                                <option  *ngFor="let m of marque" [ngValue]="m" [selected]="model.marque.idMarque === m.idMarque"  >{{m.markName}}</option>
+                                                            </select>
+                                                        </div>
+                                                       
+                                                        
                                                 </div>
+
                                                 <div class="form-group"><label for="address"><strong>Nom du Model :</strong><br></label>
                                                     <input class="form-control" type="text" id="address" placeholder="Entrer le nom de la marque" [(ngModel)]="model.modelName">
                                                 </div>
