@@ -23,6 +23,7 @@ import { UpdateModelComponent } from './Component/Model/update-model/update-mode
 import { AjouterContratComponent } from './Component/Contrat/ajouter-contrat/ajouter-contrat.component';
 import { UpdateContratComponent } from './Component/Contrat/update-contrat/update-contrat.component';
 import { ListContratComponent } from './Component/Contrat/list-contrat/list-contrat.component';
+import { DatePipe } from '@angular/common';
 
 
  
@@ -49,13 +50,15 @@ import { ListContratComponent } from './Component/Contrat/list-contrat/list-cont
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+
   ],
   providers: [
     {provide : HTTP_INTERCEPTORS,
       useClass : AuthInterceptor , 
       multi:true
-    }],
+    },
+    DatePipe,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

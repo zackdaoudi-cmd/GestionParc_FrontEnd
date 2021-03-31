@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Contrat } from 'src/app/Model/Contrat';
 import { ContratService } from 'src/app/Service/ContratService/contrat.service';
+import { DatePipe } from '@angular/common'
 
 @Component({
   selector: 'app-ajouter-contrat',
@@ -14,7 +15,8 @@ export class AjouterContratComponent implements OnInit {
   imgURL:any;
   contrat : Contrat =  new Contrat();
   constructor(private contratService : ContratService,
-     private router : Router) { }
+     private router : Router,
+     public datepipe: DatePipe) { }
 
   ngOnInit(): void {
   }

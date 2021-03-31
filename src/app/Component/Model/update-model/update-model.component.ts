@@ -24,6 +24,7 @@ export class UpdateModelComponent implements OnInit {
   ngOnInit(): void {
     this.getModelById();
   }
+  
    photoData:any ; 
   getModelById(){
 

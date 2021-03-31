@@ -46,11 +46,7 @@ const routes: Routes = [
                     {path :'ajouterContrat' , component:AjouterContratComponent},
                     {path:'listDesContrats' , component :ListContratComponent},
                     {path:'ModifierContrat/:id',component:UpdateContratComponent}
-          
                     /**End Contrat */
-
-
-
        ]
     }
         

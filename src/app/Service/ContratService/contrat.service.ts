@@ -26,4 +26,12 @@ export class ContratService {
   deleteById(id:Number):Observable<any>{
     return this.http.delete<any>(`${baseUrl}Contrats/deleteById/${id}`);
   }
+
+  getById(id : Number):Observable<any>{
+    return this.http.get<any>(`${baseUrl}Contrats/getById/${id}`);
+  }
+
+  updateById(id:Number,contrat:Contrat):Observable<any>{
+    return this.http.put(`${baseUrl}Contrats/updateById/${id}`,contrat);
+  }
 }
